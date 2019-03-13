@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>edit_entry</title>
+    <title>修改笔记</title>
 </head>
 <body>
 {% extends "learning_logs/base.html" %}
@@ -14,7 +14,7 @@
 <form action="{% url 'learning_logs:edit_entry' entry.id %}" method='post'>
     {% csrf_token %}
     {{ form.as_p }}
-    <button name="submit">save changes</button>
+    <button name="submit">保存修改</button>
 </form>
 {% endblock content %}
 </body>

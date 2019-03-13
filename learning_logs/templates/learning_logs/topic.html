@@ -1,12 +1,12 @@
 {% extends "learning_logs/base.html" %}
 
 {% block header %}
-<h2 xmlns="http://www.w3.org/1999/html">Topic:{{ topic }}</h2>
+<h2 xmlns="http://www.w3.org/1999/html">主题：{{ topic }}</h2>
 {% endblock header %}
 
 {% block content %}
 <p>
-    <a href="{% url 'learning_logs:new_entry' topic.id %}">Add new entry</a>
+    <a href="{% url 'learning_logs:new_entry' topic.id %}">在这里创建笔记</a>
 </p>
 
     {% for entry in entries %}
@@ -15,7 +15,7 @@
           <h3>
              {{ entry.date_added|date:'M d, Y H:i' }}
             <small>
-                <a href="{% url 'learning_logs:edit_entry' entry.id %}">Edit entry</a>
+                <a href="{% url 'learning_logs:edit_entry' entry.id %}">编辑</a>
              </small>
           </h3>
          </div>
@@ -24,7 +24,7 @@
         </div>
     </div><!-- panel -->
     {% empty %}
-        There is no entries to show off yet.
+        没有可以显示的笔记，点击“创建笔记”来记录你的所见所闻
     {% endfor %}
 
 {% endblock content %}
