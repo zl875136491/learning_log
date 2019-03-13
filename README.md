@@ -1,9 +1,21 @@
 # learning_log
-Python从入门到实践：项目3Web应用程序：Django入门：学习笔记
-我的疏忽，gitignore设置错误。如果想要运行项目：
-1.请把ll_env目录及其目录下的所有文件删除;
+
+Python从入门到实践：项目3Web应用程序：Django入门：学习笔记\n
+
+为保证正常运行：
+
+
+1.请把虚拟环境（ll_env）删除;
+
 2.请把每个子路径的__pycache__文件夹删除;
-3.然后执行pip3 install -r requirement.txt;
-创建虚环境;
-创建数据库python manage.py migrate;
-执行运行python manage.py runserver.
+
+3.创建虚拟环境;
+
+4.pip install -r requirements.txt
+
+5.python manage.py makemigrations
+
+6.python manage.py migrate
+
+7.python manage.py runserver.
+
